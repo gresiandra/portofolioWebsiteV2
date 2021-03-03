@@ -1,4 +1,4 @@
-const menuToggle = document.querySelector('.menu-toggle div:first-child');
+const menuToggle = document.querySelector('.menu-toggle');
 
 window.addEventListener('scroll', (e) => {
     const header = document.querySelector('header');
@@ -6,6 +6,7 @@ window.addEventListener('scroll', (e) => {
 });
 
 menuToggle.addEventListener('click', (e) => {
+    const header = document.querySelector('header');
     const menu = document.querySelector('.menu');
     const menuLi = document.querySelectorAll('.menu li');
 
@@ -14,9 +15,11 @@ menuToggle.addEventListener('click', (e) => {
     }
 
     menu.classList.toggle('active');
+    header.classList.toggle('active');
 })
 
 function toggleMenu(){
+    const header = document.querySelector('header');
     const menu = document.querySelector('.menu');
     const menuLi = document.querySelectorAll('.menu li');
 
@@ -25,4 +28,5 @@ function toggleMenu(){
     }
 
     menu.classList.remove('active');
+    header.classList.toggle('active');
 }
