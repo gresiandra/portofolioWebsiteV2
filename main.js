@@ -2,7 +2,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 
 window.addEventListener('scroll', (e) => {
     const header = document.querySelector('header');
-    header.classList.toggle('responsive', window.scrollY>0);
+    header.classList.toggle('scrolls', window.scrollY>0);
 });
 
 menuToggle.addEventListener('click', (e) => {

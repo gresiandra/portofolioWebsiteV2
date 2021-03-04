@@ -19,24 +19,22 @@ header {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 35px;
+    padding: 25px;
     transition: 0.5s;
     background-color:rgba(0, 0, 0, 0.5);
     color: #f9f3f3;
 }
 
 .logo {
-    font-family: 'Acme', sans-serif;
     font-size: 1.3rem;
 }
 
 .logo span {
-    font-family: 'Acme', sans-serif;
     font-size: 2.5rem;
-    color: #ffbe0f
+    color: #ffbe0f;
 }
 
-header.responsive {
+header.scrolls {
     position: fixed;
     top: 0;
     padding: 15px;
@@ -76,11 +74,11 @@ header.responsive {
     margin: 3px 0;
 }
 
-header.responsive .menu-toggle div:last-child h2 {
+header.scrolls .menu-toggle div:last-child h2 {
     color: rgba(0, 0, 0, 0.8);
 }
 
-header.responsive .menu-toggle span {
+header.scrolls .menu-toggle span {
     border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -113,7 +111,7 @@ header.active .menu-toggle div:last-child h2 {
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #f9f3f3;
     transition: 0.5s;
     z-index: 1;
@@ -149,7 +147,7 @@ header.active .menu-toggle div:last-child h2 {
     color: #f9f3f3;
 }
 
-header.responsive .menu li a {
+header.scrolls .menu li a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -157,10 +155,10 @@ header.responsive .menu li a {
 }
 
 .menu li:hover {
-    border-bottom: 2px solid rgba(200, 200, 200, 1);
+    border-bottom: 2px solid  #f9f3f3;
 }
 
-header.responsive .menu li:hover {
+header.scrolls .menu li:hover {
     border-bottom: 2px solid rgba(30 ,30, 30, 1);
 }
 
@@ -173,15 +171,11 @@ section {
     font-weight: 700;
 }
 
-section:nth-child(even){
-    background-color: #333;
-    color: #f9f3f3;
-}
-
 #home {
     background-image: url('img/backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    color:  #f9f3f3;
 }
 @media screen and (max-width: 900px){
     .menu {
@@ -192,8 +186,9 @@ section:nth-child(even){
 @media screen and (max-width: 650px){
 
     .menu{
+        position: absolute;
         width: 0;
-        height: 0;
+        right: 0;
         overflow: hidden;
     }
 
