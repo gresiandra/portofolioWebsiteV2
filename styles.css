@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 body {
-    background-color: #f9f3f3;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: #fffcf9;
 }
 
 header {
@@ -19,10 +19,10 @@ header {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    padding: 25px;
+    padding: 40px 70px;
     transition: 0.5s;
-    background-color:rgba(0, 0, 0, 0.5);
-    color: #f9f3f3;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fffcf9;
 }
 
 .logo {
@@ -31,7 +31,7 @@ header {
 
 .logo span {
     font-size: 2.5rem;
-    color: #ffbe0f;
+    color: #ffbc1f;
 }
 
 header.scrolls {
@@ -40,7 +40,7 @@ header.scrolls {
     padding: 15px;
     padding-left: 15px;
     color: #333;
-    background-color: #f9f3f3;
+    background-color: #fffcf9;
     transition: 0.5s;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
@@ -69,8 +69,8 @@ header.scrolls {
 
 .menu-toggle span {
     width: 24px;
-    border: 1px solid #f9f3f3;
-    background-color: #f9f3f3;
+    border: 1px solid #fffcf9;
+    background-color: #fffcf9;
     margin: 3px 0;
 }
 
@@ -112,7 +112,7 @@ header.active .menu-toggle div:last-child h2 {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #f9f3f3;
+    background-color: #fffcf9;
     transition: 0.5s;
     z-index: 1;
 }
@@ -129,7 +129,9 @@ header.active .menu-toggle div:last-child h2 {
 }
 
 .menu li.active {
-    line-height: 3rem;
+    line-height: 2rem;
+    padding-bottom: 0px;
+    padding-top: 20px;
 }
 
 .menu li.active a{
@@ -144,7 +146,7 @@ header.active .menu-toggle div:last-child h2 {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #f9f3f3;
+    color: #fffcf9;
 }
 
 header.scrolls .menu li a {
@@ -155,7 +157,11 @@ header.scrolls .menu li a {
 }
 
 .menu li:hover {
-    border-bottom: 2px solid  #f9f3f3;
+    border-bottom: 2px solid  #ffbc1f;
+}
+
+.menu li.active:hover {
+    border-bottom: 2px solid rgba(30 ,30, 30, 1)
 }
 
 header.scrolls .menu li:hover {
@@ -166,7 +172,7 @@ section {
     width: 100%;
     height: 100vh;
     display: grid;
-    place-content: center;
+    align-items: center;
     font-size: 3rem;
     font-weight: 700;
 }
@@ -175,8 +181,78 @@ section {
     background-image: url('img/backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    color:  #f9f3f3;
+    color:  #fffcf9;
 }
+
+#home .intro {
+    display: flex;
+    flex-direction: column;
+    margin: 0 70px;
+}
+
+#home .intro h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+#home .intro h1 span{
+    color: #ffbc1f;
+}
+
+#home .intro p span{
+    color: #ffbc1f;
+}
+
+#home .intro p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+#home .buttons {
+    display: flex;
+    margin-top: 50px;
+}
+
+#home .buttons #linkedinBtn {
+    background: transparent;
+    width: 150px;
+    height: 50px;
+    color: #ffbc1f;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #ffbc1f;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#home .buttons #linkedinBtn:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 15px 5px rgba(255, 190, 15, 0.3);
+}
+
+#home .buttons #hireBtn {
+    background-color: #ffbc1f;
+    width: 150px;
+    height: 50px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #ffbc1f;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-right: 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#home .buttons #hireBtn:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 15px 5px rgba(255, 190, 15, 0.3);
+}
+
 @media screen and (max-width: 900px){
     .menu {
         width: 60%;
@@ -184,6 +260,9 @@ section {
 }
 
 @media screen and (max-width: 650px){
+    header {
+        padding: 20px 40px;
+    }
 
     .menu{
         position: absolute;
@@ -196,5 +275,21 @@ section {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding-top: 7px;
+    }
+
+    #home .intro {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 30px;
+    }
+
+    #home .intro h1 {
+        font-size: 3.3rem;
+    }
+    
+    #home .intro p {
+        font-size: 1.3rem;
     }
 }
