@@ -1,3 +1,9 @@
+:root {
+    --main-color: #fafafa;
+    --secondary-color: #1e1e1e;
+    --ternary-color: #ffbc1f;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +13,8 @@
 }
 
 body {
-    background-color: #fffcf9;
+    background-image: url("img/grey.png");
+    background-color: var(--main-color);
 }
 
 header {
@@ -22,7 +29,7 @@ header {
     padding: 40px 70px;
     transition: 0.5s;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fffcf9;
+    color: var(--main-color);
 }
 
 .logo {
@@ -31,7 +38,7 @@ header {
 
 .logo span {
     font-size: 2.5rem;
-    color: #ffbc1f;
+    color: var(--ternary-color);
 }
 
 header.scrolls {
@@ -40,7 +47,7 @@ header.scrolls {
     padding: 15px;
     padding-left: 15px;
     color: #333;
-    background-color: #fffcf9;
+    background-color: var(--main-color);
     transition: 0.5s;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
@@ -69,8 +76,8 @@ header.scrolls {
 
 .menu-toggle span {
     width: 24px;
-    border: 1px solid #fffcf9;
-    background-color: #fffcf9;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
     margin: 3px 0;
 }
 
@@ -112,7 +119,7 @@ header.active .menu-toggle div:last-child h2 {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #fffcf9;
+    background-color: var(--main-color);
     transition: 0.5s;
     z-index: 1;
 }
@@ -146,7 +153,7 @@ header.active .menu-toggle div:last-child h2 {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #fffcf9;
+    color: var(--main-color);
 }
 
 header.scrolls .menu li a {
@@ -157,24 +164,24 @@ header.scrolls .menu li a {
 }
 
 .menu li:hover {
-    border-bottom: 2px solid  #ffbc1f;
+    border-bottom: 2px solid  var(--ternary-color);
 }
 
 .menu li.active:hover {
-    border-bottom: 2px solid rgba(30 ,30, 30, 1)
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 header.scrolls .menu li:hover {
-    border-bottom: 2px solid rgba(30 ,30, 30, 1);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 section {
     width: 100%;
     height: 100vh;
     display: grid;
-    align-items: center;
     font-size: 3rem;
     font-weight: 700;
+    margin-top: 50px;
 }
 
 #home {
@@ -182,6 +189,8 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     color:  #fffcf9;
+    align-items: center;
+    margin-top: 0;
 }
 
 #home .intro {
@@ -192,15 +201,15 @@ section {
 
 #home .intro h1 {
     font-size: 4rem;
-    margin-bottom: 30px;
+    margin: 40px 0;
 }
 
 #home .intro h1 span{
-    color: #ffbc1f;
+    color: var(--ternary-color);
 }
 
 #home .intro p span{
-    color: #ffbc1f;
+    color: var(--ternary-color);
 }
 
 #home .intro p {
@@ -211,17 +220,22 @@ section {
 
 #home .buttons {
     display: flex;
-    margin-top: 50px;
+    margin-top: 70px;
+}
+
+#home .buttons a{
+    text-decoration: none;
+    color: var(--ternary-color);
 }
 
 #home .buttons #linkedinBtn {
     background: transparent;
     width: 150px;
     height: 50px;
-    color: #ffbc1f;
+    color: var(--ternary-color);
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid #ffbc1f;
+    border: 2px solid var(--ternary-color);
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
@@ -234,13 +248,13 @@ section {
 }
 
 #home .buttons #hireBtn {
-    background-color: #ffbc1f;
+    background-color: var(--ternary-color);
     width: 150px;
     height: 50px;
     color: black;
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid #ffbc1f;
+    border: 2px solid var(--ternary-color);
     border-radius: 10px;
     transition: 0.3s;
     margin-right: 20px;
@@ -251,6 +265,95 @@ section {
 #home .buttons #hireBtn:hover{
     transition: 0.3s;
     box-shadow: 0 0 15px 5px rgba(255, 190, 15, 0.3);
+}
+
+#about {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 1fr 1fr;
+    gap: 20px;
+}
+
+#about span {
+    font-size: 4rem;
+    color: var(--ternary-color);
+}
+
+#about h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    grid-column: 2 / 3;
+    font-size: 4rem;
+}
+
+#about .pictures {
+    display: flex;
+    justify-content: flex-end;
+    grid-row: 1 / 4;
+    height: 100%;
+}
+
+#about .pictures .imgBox {
+    width: 95%;
+    height: 100%;
+    background-image: url('img/me.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#about .description {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    grid-row: 2 / 4;
+    /* border: 1px solid black; */
+}
+
+#about .description .desc {
+    margin: 10px 30px 0 10px;
+    padding: 10px;
+    height: auto;
+    font-size: 1.2rem;
+    /* border: 1px solid black; */
+}
+
+#about .description .desc p {
+    line-height: 30px;
+}
+
+#about .description .desc p:first-child {
+    margin-bottom: 20px;
+}
+
+#about .description .downloadCV {
+    margin: 0 30px 10px 10px;
+    padding: 30px 10px 10px;
+    height: 100%;
+    font-size: 1.4rem;
+    /* border: 1px solid black; */
+}
+
+#about .description .downloadCV #cvBtn {
+    margin-top: 15px;
+    background-color: var(--ternary-color);
+    width: 150px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+} 
+
+#about .description .downloadCV #cvBtn a {
+    text-decoration: none;
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 900px){
