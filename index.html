@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 <body>
@@ -37,22 +38,21 @@
 
     <section id="home">
         <div class="intro">
-            <h1>Need A <span>Web Developer</span> ?</h1>
-            <p>Hi, my name is Gresiandra. I am a  Web Developer living in Indonesia. i specialized in <span>Front-End Development</span>.</p>
-            <div class="buttons">
+            <h1 data-aos="fade-up">Need A <span>Web Developer</span> ?</h1>
+            <p data-aos="fade-up">Hi, my name is Gresiandra. I am a  Web Developer living in Indonesia. i specialized in <span>Front-End Development</span>.</p>
+            <div class="buttons" data-aos="fade-right" data-aos-delay="400">
                 <button id="hireBtn">Hire Me</button>
                 <button id="linkedinBtn"><a href="https://www.linkedin.com/in/gresiandra-putra-972b4120">LinkedIn</a></button>
             </div>
         </div>
     </section>
     <section id="about">
-        <h2>About Me <span>.</span></h2>
-        <div class="pictures">
+        <h2 data-aos="fade-up">About Me <span>.</span></h2>
+        <div class="pictures" data-aos="fade-up" data-aos-delay="400">
             <div class="imgBox">
-                
             </div>
         </div>
-        <div class="description">
+        <div class="description" data-aos="fade-up" data-aos-delay="300">
             <div class="desc">
                 <p>Hi, i am Gresiandra Fitrahananda Putra. I was born in Samarinda, February 7<sup>th</sup> 1997. 
                     I studied at Mulawarman University and managed to get a degree in informatics engineering.
@@ -60,7 +60,7 @@
                 </p>
                 <p>
                     I chose to dive into programming with a focus on front-end development to create user-friendly interfaces on a variety of different devices.
-                    check out my CV and some of the projects I've worked on so far below
+                    check out my CV and some of the projects I've worked on so far below.
                 </p>
             </div>
             <div class="downloadCV">
@@ -73,6 +73,12 @@
     <section id="projects"></section>
     
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,
+        });
+    </script>
 </body>
 
 </html>
