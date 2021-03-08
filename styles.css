@@ -177,7 +177,7 @@ header.scrolls .menu li:hover {
 }
 
 section {
-    width: 100%;
+    width: 100%; 
     min-height: 100vh;
     display: grid;
     font-size: 3rem;
