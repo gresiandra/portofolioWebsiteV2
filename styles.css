@@ -182,7 +182,7 @@ section {
     display: grid;
     font-size: 3rem;
     font-weight: 700;
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
 #home {
@@ -366,7 +366,6 @@ section {
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100px 1fr;
-    margin-top: 20px;
 }
 
 #skills h2 {
