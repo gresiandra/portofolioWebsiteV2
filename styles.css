@@ -318,7 +318,7 @@ section {
     padding: 10px;
     height: auto;
     font-size: 1.2rem;
-    /* border: 1px solid black; */
+    color: rgba(0,0,0,0.8);
 }
 
 #about .description .desc p {
