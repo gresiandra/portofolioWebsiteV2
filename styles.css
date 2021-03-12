@@ -13,7 +13,6 @@
 }
 
 body {
-    background-image: url("img/grey.png");
     background-color: var(--main-color);
 }
 
@@ -186,7 +185,7 @@ section {
 }
 
 #home {
-    background-image: url('img/backgrounds.jpg');
+    background-image: url('img/backgrounds-min.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color:  #fffcf9;
