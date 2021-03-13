@@ -1,5 +1,5 @@
 :root {
-    --main-color: #fafafa;
+    --main-color: white;
     --secondary-color: #1e1e1e;
     --ternary-color: #ffbc1f;
 }
@@ -181,7 +181,11 @@ section {
     display: grid;
     font-size: 3rem;
     font-weight: 700;
-    margin-top: 200px;
+    padding-top: 200px;
+    background-image: url('img/background1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #home {
@@ -190,7 +194,7 @@ section {
     background-repeat: no-repeat;
     color:  #fffcf9;
     align-items: center;
-    margin-top: 0;
+    padding-top: 0;
 }
 
 #home .intro {
@@ -251,7 +255,6 @@ section {
     background-color: var(--ternary-color);
     width: 150px;
     height: 50px;
-    color: black;
     font-size: 1rem;
     font-weight: 600;
     border: 2px solid var(--ternary-color);
@@ -259,6 +262,10 @@ section {
     transition: 0.3s;
     margin-right: 20px;
     cursor: pointer;
+}
+
+#home .buttons #hireBtn a {
+    color: black;
     letter-spacing: 2px;
 }
 
@@ -318,7 +325,7 @@ section {
     padding: 10px;
     height: auto;
     font-size: 1.2rem;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,0.9);
 }
 
 #about .description .desc p {
@@ -334,7 +341,6 @@ section {
     padding: 50px 10px 10px;
     height: 100%;
     font-size: 1.4rem;
-    /* border: 1px solid black; */
 }
 
 #about .description .downloadCV #cvBtn {
@@ -409,6 +415,7 @@ section {
     min-width: 250px;
     min-height: 250px;
     transition: 0.3s;
+    background-color: var(--main-color);
 }
 
 #skills .cards-container .card:hover{
@@ -440,6 +447,7 @@ section {
     text-align: center;
     grid-template-columns: minmax(300px,900px);
     grid-template-rows: 100px 1fr;
+    min-height: 130vh;
 }
 
 #projects h2 {
@@ -485,6 +493,7 @@ section {
     border: 2px solid black;
     border-top: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    background-color: var(--main-color);
     box-shadow: 0 -5px 0px 1px var(--ternary-color);
 }
 
@@ -561,6 +570,10 @@ section {
 
     #about .description .downloadCV {
         margin: 0 10px;
+    }
+
+    #projects .project {
+        margin: 30px 30px;
     }
 }
 
