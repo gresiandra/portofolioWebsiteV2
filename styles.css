@@ -462,10 +462,6 @@ section {
     color: var(--ternary-color);
 }
 
-#projects .project-container {
-    /* border: 1px solid black; */
-}
-
 #projects .glide__arrow.glide__arrow--left {
 	width: 80px;
 	height: 60px;
@@ -571,10 +567,6 @@ section {
     #about .description .downloadCV {
         margin: 0 10px;
     }
-
-    #projects .project {
-        margin: 30px 30px;
-    }
 }
 
 @media screen and (max-width: 650px){
@@ -643,6 +635,7 @@ section {
         margin: 30px 20px;
         padding-top: 20px;
         box-shadow: 0 -5px 0px 1px var(--ternary-color);
+        border: 1px solid black;
     }
 
     #projects .project .project-img {
