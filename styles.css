@@ -286,7 +286,7 @@ section {
     width: 100%;
     padding-left: 20px;
     grid-column: 2 / 3;
-    font-size: 4rem;
+    font-size: 3.7rem;
 }
 
 #about .pictures {
@@ -371,7 +371,7 @@ section {
     height: 100%;
     width: 100%;
     padding-left: 20px;
-    font-size: 4rem;
+    font-size: 3.7rem;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     text-align: center;
@@ -396,8 +396,9 @@ section {
 }
 
 #skills .cards-container .card {
-    border: 1px solid rgba(30, 30, 30, 0.5);
-    box-shadow: -2px 2px 5px rgba(30, 30, 30, 0.5);
+    border: 2px solid rgba(30, 30, 30, 1);
+    border-top: 2px solid rgba(30, 30, 30, 0.5);
+    box-shadow: 0px -5px 1px var(--ternary-color);
     margin: 20px;
     border-radius: 10px;
     display: flex;
@@ -431,6 +432,106 @@ section {
     margin-bottom: 50px;
     font-weight: 400;
     color: rgba(30, 30, 30, 0.8)
+}
+
+#projects {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    grid-template-columns: minmax(300px,900px);
+    grid-template-rows: 100px 1fr;
+}
+
+#projects h2 {
+    height: 100%;
+    width: 100%;
+    font-size: 3.7rem;
+    text-align: center;
+}
+
+#projects h2 span {
+    font-size: 4rem;
+    color: var(--ternary-color);
+}
+
+#projects .project-container {
+    /* border: 1px solid black; */
+}
+
+#projects .glide__arrow.glide__arrow--left {
+	width: 80px;
+	height: 60px;
+	border-radius: 10px;
+	font-size: 2rem;
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+#projects .glide__arrow.glide__arrow--right{
+	width: 80px;
+	height: 60px;
+	border-radius: 10px;
+	font-size: 2rem;
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+
+#projects .project {
+	display: grid;
+	grid-template-columns: 1fr 0.7fr;
+	align-items: center;
+	grid-gap: 15px;
+	height: auto;
+    padding: 10px;
+	margin: 70px 20px 20px;
+    border: 2px solid black;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 -5px 0px 1px var(--ternary-color);
+}
+
+#projects .project .project-info {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	padding: 10px;
+	height: minmax(250px,400px);
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+#projects .project .project-info .project-title h2{
+	margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#projects .project .project-info .project-desc {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+	height: 150px;
+    color: rgba(30, 30, 30, 0.8);
+}
+
+#projects .project .project-img {
+	background-image: url('img/maps.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 300px;
+	border-radius: 10px;
+}
+
+#projects .project .project-button button {
+	width: 120px;
+	height: 40px;
+    background-color: var(--ternary-color);
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 900px){
@@ -519,5 +620,32 @@ section {
 
     #about .description .downloadCV {
         margin: 0 10px;
+    }
+
+    #projects .project {
+        display: grid;
+        grid-template-columns: 0.9fr;
+        grid-template-rows: 0.9fr;
+        place-content: center;
+        margin: 30px 20px;
+        padding-top: 20px;
+        box-shadow: 0 -5px 0px 1px var(--ternary-color);
+    }
+
+    #projects .project .project-img {
+        height: 200px;
+    }
+
+    #projects .project .project-info .project-title{
+        width: 100%;
+    }
+
+    #projects .project .project-info .project-desc {
+        height: 130px;
+        text-align: center;
+    }
+
+    #projects .project .project-button {
+        width: 100%;
     }
 }
