@@ -6,11 +6,15 @@
 		display: none;
 	}
 
-	.glide__bullets {
-		display: none;
-	}
-
 	.glide__arrow--left{left:4.5em}
 
 	.glide__arrow--right{right:4.5em}
 }
+
+@media screen and (max-width: 500px){
+	.glide__bullets {
+		display: inline-block;
+		bottom:-0.3em
+	}
+}
+
