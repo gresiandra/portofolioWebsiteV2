@@ -147,12 +147,13 @@ header.active .menu-toggle div:last-child h2 {
 }
 
 .menu li a {
-    display: inline-block;
+    display: inline;
     width: 100%;
     height: 100%;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
+    padding: 3px;
     color: var(--main-color);
 }
 
