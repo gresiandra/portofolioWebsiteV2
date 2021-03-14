@@ -367,6 +367,11 @@ section {
 #about .description .downloadCV #cvBtn a {
     text-decoration: none;
     color: var(--secondary-color);
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    line-height: 45px;
 }
 
 #skills {
@@ -575,6 +580,10 @@ section {
 #projects .project .project-button button a {
     text-decoration: none;
     color: var(--secondary-color);
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding-top: 7px;
 }
 
 @media screen and (max-width: 900px){
