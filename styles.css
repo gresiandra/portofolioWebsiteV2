@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-snap-type: proximity;
     font-family: 'Fira Sans Condensed', sans-serif;
 }
 
@@ -176,6 +177,20 @@ header.scrolls .menu li:hover {
     border-bottom: 2px solid var(--secondary-color);
 }
 
+section::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-image: url('img/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
 section {
     width: 100%; 
     min-height: 100vh;
@@ -183,10 +198,6 @@ section {
     font-size: 3rem;
     font-weight: 700;
     padding-top: 200px;
-    background-image: url('img/background1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 }
 
 #home {
