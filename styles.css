@@ -571,6 +571,15 @@ section {
 	border-radius: 10px;
 }
 
+#projects .project .project-img3 {
+	background-image: url('img/QO1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 300px;
+	border-radius: 10px;
+}
+
 #projects .project .project-button button {
 	width: 120px;
 	height: 40px;
