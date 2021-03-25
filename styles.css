@@ -26,6 +26,10 @@
     z-index: -1;
 } */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--main-color);
 }
